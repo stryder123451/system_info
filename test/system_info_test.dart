@@ -1,7 +1,8 @@
+import 'package:device_system_info/system_info.dart';
+import 'package:device_system_info/system_info_method_channel.dart';
+import 'package:device_system_info/system_info_platform_interface.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_info/system_info.dart';
-import 'package:system_info/system_info_platform_interface.dart';
-import 'package:system_info/system_info_method_channel.dart';
+
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockSystemInfoPlatform
@@ -12,14 +13,12 @@ class MockSystemInfoPlatform
 
   @override
   Future<String?> getDeviceInfo() {
-    // TODO: implement getDeviceInfo
-    throw UnimplementedError();
+    return SystemInfo.getDeviceInfo();
   }
 
   @override
-  Future<String?> getUniqueIdentifier() {
-    // TODO: implement getUniqueIdentifier
-    throw UnimplementedError();
+  Future<String?> getUniqueIdentifier() async {
+    return SystemInfo.getUniqueIdentifier();
   }
 }
 
@@ -31,10 +30,10 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    SystemInfo systemInfoPlugin = SystemInfo();
+    //SystemInfo systemInfoPlugin = SystemInfo();
     MockSystemInfoPlatform fakePlatform = MockSystemInfoPlatform();
     SystemInfoPlatform.instance = fakePlatform;
 
-    expect(await systemInfoPlugin.getPlatformVersion(), '42');
+    expect(await SystemInfo.getPlatformVersion(), '42');
   });
 }

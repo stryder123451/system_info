@@ -1,11 +1,11 @@
-name: system_info
+name: device_system_info
 description: System information
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
-  sdk: '>=3.1.5 <4.0.0'
-  flutter: '>=3.3.0'
+  sdk: ">=3.1.5 <4.0.0"
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:

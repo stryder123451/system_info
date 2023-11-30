@@ -1,15 +1,15 @@
 import 'system_info_platform_interface.dart';
 
 class SystemInfo {
-  Future<String?> getPlatformVersion() {
+  static Future<String?> getPlatformVersion() {
     return SystemInfoPlatform.instance.getPlatformVersion();
   }
 
-  Future<String?> getDeviceInfo() {
+  static Future<String?> getDeviceInfo() {
     return SystemInfoPlatform.instance.getDeviceInfo();
   }
 
-  Future<String?> getUniquueIdentifier() {
+  static Future<String?> getUniqueIdentifier() {
     return SystemInfoPlatform.instance.getUniqueIdentifier();
   }
 }
