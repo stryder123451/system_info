@@ -8,4 +8,8 @@ class SystemInfo {
   Future<String?> getDeviceInfo() {
     return SystemInfoPlatform.instance.getDeviceInfo();
   }
+
+  Future<String?> getUniquueIdentifier() {
+    return SystemInfoPlatform.instance.getUniqueIdentifier();
+  }
 }

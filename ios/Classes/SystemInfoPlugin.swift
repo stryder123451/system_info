@@ -12,7 +12,11 @@ public class SystemInfoPlugin: NSObject, FlutterPlugin {
     switch call.method {
     case "getPlatformVersion":
       result("iOS " + UIDevice.current.systemVersion)
-    default:
+    case "getDeviceInfo":
+        result(UIDevice.current.model)
+    case "getUniqueIdentifier":
+        result(UIDevice.current.identifierForVendor!.uuidString)
+      default:
       result(FlutterMethodNotImplemented)
     }
   }

@@ -15,6 +15,12 @@ class MockSystemInfoPlatform
     // TODO: implement getDeviceInfo
     throw UnimplementedError();
   }
+
+  @override
+  Future<String?> getUniqueIdentifier() {
+    // TODO: implement getUniqueIdentifier
+    throw UnimplementedError();
+  }
 }
 
 void main() {

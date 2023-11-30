@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> checkInfo() async {
-    var res = await _systemInfoPlugin.getDeviceInfo();
+    var res = await _systemInfoPlugin.getUniquueIdentifier();
     debugPrint(res);
   }
 

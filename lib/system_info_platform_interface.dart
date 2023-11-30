@@ -30,4 +30,8 @@ abstract class SystemInfoPlatform extends PlatformInterface {
   Future<String?> getDeviceInfo() {
     throw UnimplementedError('getDeviceInfo() has not been implemented.');
   }
+
+  Future<String?> getUniqueIdentifier() {
+    throw UnimplementedError('getUniqueIdentifier() has not been implemented.');
+  }
 }

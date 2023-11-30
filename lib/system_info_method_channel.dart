@@ -25,4 +25,15 @@ class MethodChannelSystemInfo extends SystemInfoPlatform {
       return "Not implented because of $e";
     }
   }
+
+  @override
+  Future<String?> getUniqueIdentifier() async {
+    try {
+      final version =
+          await methodChannel.invokeMethod<String>('getUniqueIdentifier');
+      return version;
+    } catch (e) {
+      return "Not implented because of $e";
+    }
+  }
 }
